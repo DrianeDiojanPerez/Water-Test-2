@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://doit.ub.edu.bz/pluginfile.php/10668/user/icon/eguru/f3?rev=214702" class="logo">
+<img src="https://doit.ub.edu.bz/pluginfile.php/10668/user/icon/eguru/f1?rev=214702" class="logo">
 </p>
 
 <p align="center">
