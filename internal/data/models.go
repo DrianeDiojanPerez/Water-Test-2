@@ -15,6 +15,7 @@ var (
 // Create a Wrapper for our data models
 
 type Models struct {
+	Permissions PermissionModel
 	Todo_list Todo_listModel
 	Tokens TokenModel
 	Users UserModel
@@ -23,6 +24,7 @@ type Models struct {
 // NewModels() allows us to create a new Models
 func NewModels(db *sql.DB) Models {
 	return Models{
+		Permissions: PermissionModel{DB: db},
 		Todo_list: Todo_listModel{DB: db},
 		Tokens: TokenModel{DB: db},
 		Users: UserModel{DB: db},
