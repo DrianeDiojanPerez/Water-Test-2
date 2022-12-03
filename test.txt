@@ -44,3 +44,23 @@ curl "localhost:4000/v1/waterbill?sort=waterbill"
 curl "localhost:4000/v1/waterbill?page=1&page_size=20"
 curl "localhost:4000/v1/waterbill?page=1220&page_size=200&sort=waterbill"
 curl "localhost:4000/v1/waterbill?page=0&page_size=-1&sort=waterbill"
+
+
+
+
+_________________________________________________________________________
+
+
+
+BODY='{"email":"elishane@gmail.com", "password":"appletree"}'
+curl -i -d "$BODY" localhost:4000/v1/tokens/authentication
+
+
+{
+        "authentication_token": {
+                "token": "3GJWVCADHIGWKNULTU66D5PTPY",
+                "expiry": "2022-12-03T13:15:47.348353707-06:00"
+        }
+}
+ curl -H "Authorization: Bearer 3GJWVCADHIGWKNULTU66D5PTPY" localhost:4000/v1/healthcheck
+
