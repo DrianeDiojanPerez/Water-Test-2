@@ -27,5 +27,5 @@ func (app *application) routes() http.Handler {
 
 	//we wrap router with recoverpanic will call router if everthing is okay
 	//then we pass to the rate limit and the process the actual request
-	return app.recoverPanic(app.rateLimit(app.authenticate(router)))
+	return app.recoverPanic(app.enableCORS(app.rateLimit(app.authenticate(router))))
 }
